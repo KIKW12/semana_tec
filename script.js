@@ -96,22 +96,74 @@ function setupRequirementsTooltip() {
 
     if (!tooltip || !requirementsList) return;
 
+    // Detectar si es dispositivo móvil
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
     courseNames.forEach(courseName => {
-        courseName.addEventListener('mouseenter', event => showTooltip(event, courseName, tooltip, requirementsList));
-        courseName.addEventListener('mouseleave', () => hideTooltip(tooltip));
+        if (isMobile) {
+            // Eventos para dispositivos móviles
+            courseName.addEventListener('click', event => {
+                event.preventDefault();
+                showMobileTooltip(event, courseName, tooltip, requirementsList);
+            });
+        } else {
+            // Eventos para desktop
+            courseName.addEventListener('mouseenter', event => {
+                showTooltip(event, courseName, tooltip, requirementsList);
+            });
+            courseName.addEventListener('mouseleave', () => {
+                hideTooltip(tooltip);
+            });
+        }
     });
 
-    // Evitar que el tooltip desaparezca cuando el mouse está sobre él
-    tooltip.addEventListener('mouseenter', () => {
-        tooltip.style.display = 'block';
-    });
+    // Eventos adicionales para dispositivos móviles
+    if (isMobile) {
+        // Cerrar tooltip al tocar fuera
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.course-name') && !event.target.closest('.tooltip')) {
+                hideTooltip(tooltip);
+            }
+        });
 
-    tooltip.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
-    });
+        // Prevenir scroll mientras el tooltip está abierto
+        tooltip.addEventListener('touchmove', (event) => {
+            event.stopPropagation();
+        });
+    } else {
+        // Mantener tooltip visible al pasar el mouse sobre él (solo desktop)
+        tooltip.addEventListener('mouseenter', () => {
+            tooltip.style.display = 'block';
+        });
+
+        tooltip.addEventListener('mouseleave', () => {
+            tooltip.style.display = 'none';
+        });
+    }
 }
 
-// Mostrar tooltip
+// Mostrar tooltip en dispositivos móviles
+function showMobileTooltip(event, courseName, tooltip, requirementsList) {
+    event.stopPropagation();
+    
+    // Obtener requisitos y períodos
+    const requirements = courseName.getAttribute('data-requirements')?.split(',') || [];
+    const periods = courseName.closest('tr').querySelector('.duration-bar').getAttribute('data-periods')?.split(',') || [];
+
+    updateRequirementsAndPeriods(requirementsList, requirements, periods);
+
+    // Posicionar tooltip en el centro de la pantalla
+    tooltip.style.position = 'fixed';
+    tooltip.style.left = '50%';
+    tooltip.style.top = '50%';
+    tooltip.style.transform = 'translate(-50%, -50%)';
+    tooltip.style.display = 'block';
+    tooltip.style.maxWidth = '90%';
+    tooltip.style.width = '300px';
+    tooltip.style.zIndex = '1000';
+}
+
+// Mostrar tooltip (versión desktop)
 function showTooltip(event, courseName, tooltip, requirementsList) {
     // Obtener requisitos y períodos
     const requirements = courseName.getAttribute('data-requirements')?.split(',') || [];
@@ -152,7 +204,7 @@ function updateRequirementsAndPeriods(requirementsList, requirements, periods) {
     }
 }
 
-// Posicionar tooltip
+// Posicionar tooltip (versión desktop)
 function positionTooltip(event, tooltip) {
     const padding = 10;
     const tooltipWidth = tooltip.offsetWidth;
@@ -164,6 +216,7 @@ function positionTooltip(event, tooltip) {
     let left = event.pageX + padding;
     let top = event.pageY + padding;
 
+    // Ajustar posición si el tooltip se sale de la pantalla
     if (left + tooltipWidth > windowWidth) {
         left = event.pageX - tooltipWidth - padding;
     }
@@ -172,11 +225,14 @@ function positionTooltip(event, tooltip) {
         top = event.pageY - tooltipHeight - padding;
     }
 
+    // Asegurar que el tooltip no se salga por la izquierda o arriba
     left = Math.max(padding, left);
     top = Math.max(padding, top);
 
+    tooltip.style.position = 'absolute';
     tooltip.style.left = `${left}px`;
     tooltip.style.top = `${top}px`;
+    tooltip.style.transform = 'none';
     tooltip.style.display = 'block';
 }
 
