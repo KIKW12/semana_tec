@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITC - Ingeniería en Tecnologías Computacionales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ITC - Ingeniería en Tecnologías Computacionales</h1>
+        <p>Plan de estudios 2019</p>
+    </header>
+
+    <div class="container">
+        <select id="semesterSelect">
+            <option value="">Selecciona un semestre</option>
+            <option value="first">Primer Semestre</option>
+            <option value="second">Segundo Semestre</option>
+            <option value="third">Tercer Semestre</option>
+            <option value="fourth">Cuarto Semestre</option>
+            <option value="fifth">Quinto Semestre</option>
+            <option value="sixth">Sexto Semestre</option>
+            <option value="seventh">Séptimo Semestre</option>
+            <option value="eighth">Octavo Semestre</option>
+        </select>
+
+        <div class="duration-legend">
+            <p>Períodos del curso:</p>
+            <div class="legend-item">
+                <div class="legend-bar">
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 100%; background-color: #4CAF50;"></div>
+                    </div>
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 0;"></div>
+                    </div>
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 0;"></div>
+                    </div>
+                </div>
+                <span>Periodo 1: Semana 1-6</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-bar">
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 0;"></div>
+                    </div>
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 100%; background-color: #FFA726;"></div>
+                    </div>
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 0;"></div>
+                    </div>
+                </div>
+                <span>Periodo 2: Semana 7-12</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-bar">
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 0;"></div>
+                    </div>
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 0;"></div>
+                    </div>
+                    <div class="duration-segment">
+                        <div class="duration-fill" style="width: 100%; background-color: #F44336;"></div>
+                    </div>
+                </div>
+                <span>Periodo 3: Semana 13-18</span>
+            </div>
+        </div>
+
+        <!-- Primer Semestre -->
+        <div id="first" class="semester">
+            <h2>Primer Semestre</h2>
+            <table>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre de la Materia</th>
+                    <th>Horas de Clase</th>
+                    <th>Horas de Laboratorio</th>
+                    <th>Créditos Académicos</th>
+                    <th>Unidades de Carga</th>
+                    <th>Duración</th>
+                </tr>
+                <tr>
+                    <td>EG1001</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa de matemáticas y ciencias</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>F1001B</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Modelación de la Ingeniería y Ciencias    </td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>F1004B</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Modelación computacional del movimiento</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="2">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>F1005B</td>
+                    <td class="course-name" data-requirements="Haber cursado Modelación computacional del movimiento">Modelación computacional aplicando leyes de conservación</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MA1028</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Modelación matemática fundamental</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Q1020</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Análisis de la estructura y propiedades de la materia</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC1029</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Pensamiento computacional y programación</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Agregar más materias del primer semestre aquí -->
+            </table>
+        </div>
+
+        <!-- Segundo Semestre -->
+        <div id="second" class="semester">
+            <h2>Segundo Semestre</h2>
+            <table>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre de la Materia</th>
+                    <th>Horas de Clase</th>
+                    <th>Horas de Laboratorio</th>
+                    <th>Créditos Académicos</th>
+                    <th>Unidades de Carga</th>
+                    <th>Duración</th>
+                </tr>
+                <tr>
+                    <td>EG1002</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa de humanidades y bellas artes</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BT1013</td>
+                    <td class="course-name" data-requirements="Haber cursado Pensamiento Computacional y Programación">Anális de biología computacional</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <div class="duration-bar" data-periods="2">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>F1008</td>
+                    <td class="course-name" data-requirements="Haber cursado Modelación computacional aplicando leyes de conservación">Experimentación física y pensamiento estadístico</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>F10013B</td>
+                    <td class="course-name" data-requirements="Haber cursado Modelación computacional aplicando leyes de conservación">Modelación computacional de sistemas eléctricos</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="2">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>F1014B</td>
+                    <td class="course-name" data-requirements="Haber cursado Modelación computacional de sistemas eléctricos">Modelación computacional de sistemas electromagnéticos</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MA1029</td>
+                    <td class="course-name" data-requirements="Haber cursado Modelación matemática fundamental">Modelación matemática intermedia</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MA1031</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Anális estadístico</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <div class="duration-bar" data-periods="3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC1003B</td>
+                    <td class="course-name" data-requirements="Haber cursado Pensamiento Computacional y Programación">Modelación de la ingeniería con matemática computacional</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC1030</td>
+                    <td class="course-name" data-requirements="Haber cursado Pensamiento Computacional y Programación">Programación orientada a objetos</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <div class="duration-bar" data-periods="3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Agregar más materias del primer semestre aquí -->
+            </table>
+        </div>
+
+        <!-- Tercer Semestre -->
+        <div id="third" class="semester">
+            <h2>Tercer Semestre</h2>
+            <table>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre de la Materia</th>
+                    <th>Horas de Clase</th>
+                    <th>Horas de Laboratorio</th>
+                    <th>Créditos Académicos</th>
+                    <th>Unidades de Carga</th>
+                    <th>Duración</th>
+                </tr>
+                <tr>
+                    <td>EG1003</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa de ciencias sociales y del comportamiento</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MA1033</td>
+                    <td class="course-name" data-requirements="Haber cursado Modelación matemática intermedia">Análisis de ecuaciones  diferenciales</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC1004B</td>
+                    <td class="course-name" data-requirements="Haber cursado Programación orientada a objetos y
+                    Modelación de la ingeniería con matemática computacional" >Implementación de internet de las cosas</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>
+                        <div class="duration-bar" data-periods="2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC1031</td>
+                    <td class="course-name" data-requirements="Haber cursado Programación orientada a objectos y 
+                    Modelación de la ingeniería con matemática computacional">Programación de estructuras de datos y algoritmos</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC1032</td>
+                    <td class="course-name" data-requirements="Haber cursado Pensamiento computacional y programación">Modelación de sistemas mínimos y arquitecturas 
+                        Computacionales
+                    </td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <div class="duration-bar" data-periods="2">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TI1015</td>
+                    <td class="course-name" data-requirements="Haber cursado Pensamiento computacional y programación">Análisis de requerimientos de software</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>
+                        <div class="duration-bar" data-periods="3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>VA1001B</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Tópico de exploración</td>
+                    <td>9</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Agregar más materias del primer semestre aquí -->
+            </table>
+        </div>
+
+        <!-- Cuarto Semestre -->
+        <div id="fourth" class="semester">
+            <h2>Cuarto Semestre</h2>
+            <table>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre de la Materia</th>
+                    <th>Horas de Clase</th>
+                    <th>Horas de Laboratorio</th>
+                    <th>Créditos Académicos</th>
+                    <th>Unidades de Carga</th>
+                    <th>Duración</th>
+                </tr>
+                <tr>
+                    <td>EG1004</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa de liderazgo, emprendimiento e innovación</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC2005B</td>
+                    <td class="course-name" data-requirements="Haber cursado Análisis de requerimientos de software e Implementación
+                    de internet de las cosas">Construcción de software y toma de decisiones</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC2006B</td>
+                    <td class="course-name" data-requirements="Haber cursado Modelación de sistemas mínimos y arquitecturas computacionales
+                    e Implementación de internet de las cosas" >Interconección de dispositivos</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>
+                        <div class="duration-bar" data-periods="3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC2037</td>
+                    <td class="course-name" data-requirements="Haber cursado Programación de estructuras 
+                    de datos y algoritmos">Implementación de métodos computacionales</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Agregar más materias del primer semestre aquí -->
+            </table>
+        </div>
+
+        <!-- Quinto Semestre -->
+        <div id="fifth" class="semester">
+            <h2>Quinto Semestre</h2>
+            <table>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre de la Materia</th>
+                    <th>Horas de Clase</th>
+                    <th>Horas de Laboratorio</th>
+                    <th>Créditos Académicos</th>
+                    <th>Unidades de Carga</th>
+                    <th>Duración</th>
+                </tr>
+                <tr>
+                    <td>EG1005</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa de ética y ciudadanía</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC2007B</td>
+                    <td class="course-name" data-requirements="Haber cursado Interconección de dispositivos
+                    y Construcción de software y toma de decisiones">Integracíon de seguridad informática en redes y sistemas de software</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>8</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC2008B</td>
+                    <td class="course-name" data-requirements="Haber cursado Implementación 
+                    de métodos computacionales" >Modelación de sistmas multiagentes con gráficas computacionales</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>
+                        <div class="duration-bar" data-periods="3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>TC2038</td>
+                    <td class="course-name" data-requirements="Haber cursado Implementación 
+                    de métodos computacionales">Anális y diseño de algoritmos avanzados</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Agregar más materias del primer semestre aquí -->
+            </table>
+        </div>
+
+        <!-- Sexto Semestre -->
+        <div id="sixth" class="semester">
+            <h2>Sexto Semestre</h2>
+            <table>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre de la Materia</th>
+                    <th>Horas de Clase</th>
+                    <th>Horas de Laboratorio</th>
+                    <th>Créditos Académicos</th>
+                    <th>Unidades de Carga</th>
+                    <th>Duración</th>
+                </tr>
+                <tr>
+                    <td>TC3001B</td>
+                    <td class="course-name" data-requirements="Haber cursado 
+                    Integración de seguridad informática en redes y sistemas de software">Desarrollo de software</td>
+                    <td>18</td>
+                    <td>6</td>
+                    <td>18</td>
+                    <td>18</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Agregar más materias del primer semestre aquí -->
+            </table>
+        </div>
+        
+
+        <!-- Septimo Semestre -->
+        <div id="seventh" class="semester">
+            <h2>Séptimo Semestre</h2>
+            <table>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre de la Materia</th>
+                    <th>Horas de Clase</th>
+                    <th>Horas de Laboratorio</th>
+                    <th>Créditos Académicos</th>
+                    <th>Unidades de Carga</th>
+                    <th>Duración</th>
+                </tr>
+                <tr>
+                    <td>OP3091</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa profesiona I</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP3092</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa profesiona II</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP3093</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa profesiona III</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP3094</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa profesiona IV</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP3095</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa profesiona V</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OP3096</td>
+                    <td class="course-name" data-requirements="No hay requisitos previos">Optativa profesiona VI</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>
+                        <div class="duration-bar" data-periods="1,2,3">
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                            <div class="duration-segment"><div class="duration-fill"></div></div>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Agregar más materias del primer semestre aquí -->
+            </table>
+        </div>
+
+    <!-- Octavo Semestre -->
+    <div id="eighth" class="semester">
+        <h2>Octavo Semestre</h2>
+        <table>
+            <tr>
+                <th>Clave</th>
+                <th>Nombre de la Materia</th>
+                <th>Horas de Clase</th>
+                <th>Horas de Laboratorio</th>
+                <th>Créditos Académicos</th>
+                <th>Unidades de Carga</th>
+                <th>Duración</th>
+            </tr>
+            <tr>
+                <td>OP3001B</td>
+                <td class="course-name" data-requirements="No hay requisitos previos">Optativa profesional multidiciplinaria</td>
+                <td>18</td>
+                <td>6</td>
+                <td>6</td>
+                <td>0</td>
+                <td>
+                    <div class="duration-bar" data-periods="1">
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>TC3002B</td>
+                <td class="course-name" data-requirements="Haber cursado 
+                Modelación de sistemas multiagentes con gráficas computacionales">Desarrollo de aplicaciones avanzadas de ciencias computacionales</td>
+                <td>18</td>
+                <td>6</td>
+                <td>6</td>
+                <td>6</td>
+                <td>
+                    <div class="duration-bar" data-periods="2">
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>TC3003B</td>
+                <td class="course-name" data-requirements="Haber cursado 
+                Integración de seguridad informática en redes y sistemas de software">Implementación de redes de área amplia y servicios distribuidos</td>
+                <td>18</td>
+                <td>6</td>
+                <td>18</td>
+                <td>18</td>
+                <td>
+                    <div class="duration-bar" data-periods="1,2,3">
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                        <div class="duration-segment"><div class="duration-fill"></div></div>
+                    </div>
+                </td>
+            </tr>
+            <!-- Agregar más materias del primer semestre aquí -->
+        </table>
+    </div>
+
+    <div id="requirements-tooltip" class="tooltip">
+        <h3>Requisitos:</h3>
+        <ul id="requirements-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
